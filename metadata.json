@@ -1,0 +1,6 @@
+{
+  "name": "PhytoCausal: Edge-Compiled Biophysical Causal MCP",
+  "description": "Edge-compiled Model Context Protocol (MCP v2025-11-25) server and biophysical causal inference engine decoupling multi-stress crop anomalies with Farquhar-von Caemmerer-Berry physics governors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
