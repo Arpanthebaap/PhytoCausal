@@ -23,7 +23,7 @@ export const REPOSITORY_FILES: RepoFile[] = [
 *Independent Researcher (Applied AI Systems & Agricultural Informatics), Birbhum, West Bengal, India*  
 **Contact:** \`arpanghosh984@gmail.com\` | +91 77971 30249 | [GitHub Profile](https://github.com/Arpanthebaap)  
 Version 1.0.0 • MIT licence  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23396098.svg)](https://doi.org/10.5281/zenodo.23396098)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23499214.svg)](https://doi.org/10.5281/zenodo.23499214)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MCP Spec](https://img.shields.io/badge/Model_Context_Protocol-Spec_v2025--11--25-06B6D4.svg)](https://modelcontextprotocol.io)
 [![Physics Governor](https://img.shields.io/badge/Physics%20Governor-FvCB%20%2B%20Arrhenius-purple.svg)]()

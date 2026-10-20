@@ -1,0 +1,6 @@
+﻿server.ts
+test/
+Dockerfile
+docker-compose.yml
+.gitlab-ci.yml
+.github/

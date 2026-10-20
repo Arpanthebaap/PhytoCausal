@@ -1,10 +1,10 @@
-﻿# PhytoCausal: Autonomous Biophysical Causal Inference and Farquhar-Governed Invariant Framework for Multi-Stress Crop Decoupling
+# PhytoCausal: Autonomous Biophysical Causal Inference and Farquhar-Governed Invariant Framework for Multi-Stress Crop Decoupling
 
 **Arpan Ghosh**  
 *Independent Researcher (Applied AI Systems & Agricultural Informatics), Birbhum, West Bengal, India*  
 **Contact:** `arpanghosh984@gmail.com` | +91 77971 30249 | [GitHub Profile](https://github.com/Arpanthebaap)  
 Version 1.0.0 • MIT licence  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23396098.svg)](https://doi.org/10.5281/zenodo.23396098)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23499214.svg)](https://doi.org/10.5281/zenodo.23499214)
 [![CI/CD](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/ci.yml/badge.svg)](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/ci.yml)
 [![Pages](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/pages.yml/badge.svg)](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -394,13 +394,13 @@ If you utilize this framework, biophysical causal models, or MCP edge server in 
   year = {2026},
   publisher = {Zenodo},
   version = {1.0.0},
-  doi = {10.5281/zenodo.23396098},
+  doi = {10.5281/zenodo.23499214},
   url = {https://github.com/Arpanthebaap/PhytoCausal}
 }
 ```
 
 ### APA
-Ghosh, A. (2026). *PhytoCausal: Autonomous Biophysical Causal Inference and Farquhar-Governed Invariant Framework for Multi-Stress Crop Decoupling* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23396098
+Ghosh, A. (2026). *PhytoCausal: Autonomous Biophysical Causal Inference and Farquhar-Governed Invariant Framework for Multi-Stress Crop Decoupling* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23499214
 
 ---
 
