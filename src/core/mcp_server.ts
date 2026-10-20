@@ -307,6 +307,9 @@ export class AgriMCPServer {
                     ko25_mbar: 278.4,
                     gammaStar25_ubar: 42.75,
                     ea_vcmax_J_mol1: 65330.0,
+                    ea_jmax_J_mol1: 43900.0,
+                    ea_rd_J_mol1: 46390.0,
+                    tpu_umol_m2_s1: 12.0,
                   },
                   null,
                   2
@@ -314,6 +317,88 @@ export class AgriMCPServer {
               },
             };
           }
+
+          if (uri === 'phytocausal://agronomy/critical-nitrogen-dilution') {
+            return {
+              jsonrpc: '2.0',
+              id,
+              result: {
+                uri,
+                mimeType: 'application/json',
+                text: JSON.stringify(
+                  {
+                    model: 'Justes Critical Nitrogen Dilution Curve',
+                    citation: 'Justes et al. (1994) Annals of Botany 74: 397-407',
+                    equation: 'Nc = a * W^(-b) = 4.8 * W^(-0.32)',
+                    parameters: {
+                      a_intercept_percent: 4.8,
+                      b_power_dilution: 0.32,
+                      w_critical_threshold_t_ha: 1.55,
+                      constant_pre_critical_percent: 4.4,
+                    },
+                    nitrogen_nutrition_index: 'NNI = N_actual / N_critical',
+                    diagnostic_thresholds: {
+                      luxury_consumption: 'NNI > 1.05',
+                      optimal_homeostasis: '0.95 <= NNI <= 1.05',
+                      true_deficiency: 'NNI < 0.95 (valid only when transpiration is active)',
+                    },
+                  },
+                  null,
+                  2
+                ),
+              },
+            };
+          }
+
+          if (uri === 'phytocausal://soil/van-genuchten-curves') {
+            return {
+              jsonrpc: '2.0',
+              id,
+              result: {
+                uri,
+                mimeType: 'application/json',
+                text: JSON.stringify(
+                  {
+                    model: 'van Genuchten Closed-Form Unsaturated Hydraulic Retention',
+                    citation: 'van Genuchten, M.T. (1980) Soil Sci. Soc. Am. J. 44: 892-898',
+                    equation: 'Theta(h) = Theta_r + (Theta_s - Theta_r) / [1 + (|alpha * h|)^n]^m with m = 1 - 1/n',
+                    soil_textures: {
+                      silt_loam: {
+                        theta_r: 0.067,
+                        theta_s: 0.45,
+                        alpha_inv_cm: 0.02,
+                        n_pore_distribution: 1.41,
+                        m: 0.291,
+                        field_capacity_kPa: -33.0,
+                        permanent_wilting_point_kPa: -1500.0,
+                      },
+                      sandy_loam: {
+                        theta_r: 0.065,
+                        theta_s: 0.41,
+                        alpha_inv_cm: 0.075,
+                        n_pore_distribution: 1.89,
+                        m: 0.471,
+                        field_capacity_kPa: -10.0,
+                        permanent_wilting_point_kPa: -1500.0,
+                      },
+                      clay: {
+                        theta_r: 0.07,
+                        theta_s: 0.36,
+                        alpha_inv_cm: 0.005,
+                        n_pore_distribution: 1.09,
+                        m: 0.083,
+                        field_capacity_kPa: -50.0,
+                        permanent_wilting_point_kPa: -1500.0,
+                      },
+                    },
+                  },
+                  null,
+                  2
+                ),
+              },
+            };
+          }
+
           return {
             jsonrpc: '2.0',
             id,

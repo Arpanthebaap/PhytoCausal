@@ -90,7 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 Phyto<span className="text-emerald-400">Causal</span>
               </h1>
               <span className="px-2 py-0.5 text-[10px] uppercase font-mono tracking-wider font-semibold rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                v1.2.0 Edge
+                v1.0.0 Production
               </span>
             </div>
             <p className="text-xs text-slate-400">

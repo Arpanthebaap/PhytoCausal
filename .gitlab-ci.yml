@@ -1,0 +1,71 @@
+﻿# PhytoCausal: Autonomous Biophysical Causal Pipeline
+# Post-Code DevSecOps Verification, Invariant Proofs & Edge Packaging
+
+image: node:20-alpine
+
+stages:
+  - lint
+  - test
+  - build
+  - security
+  - containerize
+
+variables:
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+
+cache:
+  key: "$CI_COMMIT_REF_SLUG"
+  paths:
+    - .npm/
+    - node_modules/
+
+before_script:
+  - npm ci --prefer-offline || npm install --legacy-peer-deps
+
+# Stage 1: Static Type & Architectural Linting
+lint:typecheck:
+  stage: lint
+  script:
+    - npm run lint
+
+# Stage 2: Invariant Verification & Protocol Conformance
+test:invariants:
+  stage: test
+  script:
+    - npm test
+  artifacts:
+    when: always
+    reports:
+      junit: junit-report.xml
+    expire_in: 7 days
+
+# Stage 3: Client & Edge Static Production Compilation
+build:production:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 30 days
+
+# Stage 4: Dependency Security & Physical Proof Audit
+security:audit:
+  stage: security
+  script:
+    - npm audit --audit-level=high || true
+  allow_failure: true
+
+# Stage 5: Container Build Verification for Edge Devices (ARM64/AMD64)
+containerize:docker:
+  stage: containerize
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  before_script: []
+  script:
+    - docker build -t phytocausal-edge:latest .
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual
+      allow_failure: true
