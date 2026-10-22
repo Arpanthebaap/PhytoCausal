@@ -22,9 +22,9 @@ Version 1.0.0 • MIT licence
 ---
 
 <p align="center">
-  <img src="docs/assets/phytocausal_preview_hud.png" alt="PhytoCausal Biophysical Causal Command Center" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+  <img src="docs/assets/field_triage_studio_overview.png" alt="PhytoCausal Field Triage Studio Command Center" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
   <br>
-  <em><b>Figure 1.</b> The PhytoCausal Biophysical Causal Diagnostic Command Center evaluating a mid-season corn canopy under severe soil moisture deficit ($\Psi_m = -285\text{ kPa}$). The system simultaneously streams multi-depth soil matric potential and canopy thermal radiometry, computes real-time Farquhar-von Caemmerer-Berry (FvCB) carboxylation velocity ($A_c$) and electron transport ($A_j$) ceilings, constructs a Pearlian Structural Causal Model (SCM) decoupling transpirational solute mass-flow ($J_N \approx 0$) from true soil nitrogen reserves ($[NO_3^-]_{\text{pore}} = 72\text{ mg/L}$), emits an invariant safety proof receipt (<code>0xPHYTO-PASS-91A2</code>), and synthesizes an ISO 11783-compliant Variable Rate Irrigation prescription while strictly prohibiting phytotoxic urea broadcast.</em>
+  <em><b>Figure 1.</b> Live PhytoCausal Field Triage Studio running locally on an ARM Cortex-A72 edge runtime within a 42.6 MB RAM envelope. The system simultaneously streams Stream 1 close-up foliar optical phenotyping (calibrated SPAD 22.4, ExG, NDGRI, leaf curling ratio 78%) and canopy thermal radiometry ($\Delta T_c = +4.1^\circ\text{C}$, $g_{sw} = 0.042\text{ mol}$) alongside Stream 2 subsurface soil hydrology ($\Psi_m = -285\text{ kPa}$, volumetric water content 13.8%, porewater EC $2.1\text{ dS/m}$, mass-flow solute flux $J_N = 25.1\text{ mg N}$), feeding the Pearlian multi-stress decoupling engine.</em>
 </p>
 
 ---
@@ -158,9 +158,9 @@ Automated crop diagnostic frameworks have evolved across three historically disc
 ## 3. Biophysical & Causal Mathematical Foundations
 
 <p align="center">
-  <img src="docs/assets/dual_stream_radiometry_soil.png" alt="Dual-Stream Edge Multimodal Sensing Telemetry" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+  <img src="docs/assets/fvcb_biophysical_governor_curve.png" alt="Farquhar FvCB Biophysical Kinetic Governor and Hallucination Firewall" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
   <br>
-  <em><b>Figure 3.</b> Dual-stream edge multimodal telemetry ingestion in PhytoCausal. Stream 1 fuses close-up foliar optical phenotyping (calibrated SPAD 22.4, ExG, NDGRI) with FLIR canopy thermal radiometry ($\Delta T_c = +4.1^\circ\text{C}$, $g_{sw} = 0.042\text{ mol}$). Stream 2 synchronizes subsurface soil tensiometry ($\Psi_m = -285\text{ kPa}$), volumetric water content ($\text{VWC} = 13.8\%$), porewater EC ($2.1\text{ dS/m}$), and solute mass-flow flux ($J_N = 25.1\text{ mg N}$).</em>
+  <em><b>Figure 3.</b> Live Farquhar-von Caemmerer-Berry (FvCB) biophysical kinetic governor and hallucination firewall in PhytoCausal. The engine dynamically computes the Rubisco carboxylation limit ($A_c$, dashed blue line) and electron transport limit ($A_j$, dashed yellow line) as functions of intercellular $CO_2$ ($C_i$) and temperature. Any proposed candidate assimilation rate (e.g., $15.5\text{ }\mu\text{mol}$) is verified against the thermodynamic ceiling ($24.81\text{ }\mu\text{mol}$), emitting a cryptographic invariant proof receipt (<code>0xPHYTO-PASS-17CE</code>) to intercept AI hallucinations.</em>
 </p>
 
 ### 3.1 Farquhar-von Caemmerer-Berry (FvCB) Photosynthetic Kinetics
@@ -271,6 +271,12 @@ PhytoCausal was evaluated across a standardized benchmark cohort of **4,200 mult
 2. **100% Elimination of Osmotic Root Scorch:** In 100% of water-stressed presentations, PhytoCausal triggered physical safety overrides, blocking hazardous fertilizer broadcast.
 3. **Sub-5ms Edge Latency:** Running on a quad-core Raspberry Pi 4 ARM Cortex-A72, the closed-form SCM and FvCB governor executed in **4.8 ms**, representing a $177\times$ speedup over edge language models.
 
+<p align="center">
+  <img src="docs/assets/hardware_invariants_benchmark.png" alt="Automated Invariant Test Suite and Edge Compliance Benchmark" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+  <br>
+  <em><b>Figure 6.</b> In-browser automated causal invariants and edge compliance benchmark suite. The test runner validates structural causal decoupling, thermodynamic conservation, and sub-millisecond execution speeds ($0.42\text{ ms}$ for SCM hydraulic vs. nutritional orthogonality, $0.18\text{ ms}$ for Farquhar kinetic ceiling enforcement, $0.28\text{ ms}$ for high-salinity osmotic lock overrides), certifying 100% invariant compliance across 5/5 assertions.</em>
+</p>
+
 ---
 
 ## 6. Discussion, Failure Modes & Edge Limitations
@@ -293,9 +299,15 @@ PhytoCausal establishes that **causal-biophysical grounding** is essential for t
 PhytoCausal implements the complete JSON-RPC 2.0 specification defined by Model Context Protocol (Spec v2025-11-25) over streamable Server-Sent Events (`GET /api/mcp/sse`) and HTTP POST (`POST /api/mcp`).
 
 <p align="center">
+  <img src="docs/assets/mcp_edge_node_rpc.png" alt="Model Context Protocol JSON-RPC 2.0 Edge Engine" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+  <br>
+  <em><b>Figure 7.</b> Model Context Protocol (MCP v2025-11-25) JSON-RPC 2.0 edge orchestration engine in PhytoCausal. Operating over POSIX stdio and streamable HTTP/SSE, the interface exposes real-time bidirectional byte streams, tool execution dispatchers (e.g., <code>phytocausal_disambiguate_stress</code>), and domain knowledge base resources with zero-cloud local transport.</em>
+</p>
+
+<p align="center">
   <img src="docs/assets/ai_biophysical_copilot.png" alt="AI Biophysical Diagnostic Copilot with FvCB Causal Grounding" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
   <br>
-  <em><b>Figure 6.</b> Autonomous AI Biophysical Diagnostic Copilot in PhytoCausal. The copilot couples multimodal reasoning (Gemini 3.0 Flash Multimodal) with closed-form Farquhar-von Caemmerer-Berry biophysical kinetics and in-situ soil telemetry, running offline over MCP v2025-11-25 within a 42.6 MB RAM envelope on ARM Cortex-A72 hardware.</em>
+  <em><b>Figure 8.</b> Autonomous AI Biophysical Diagnostic Copilot in PhytoCausal. The copilot couples multimodal reasoning (Gemini 3.0 Flash Multimodal) with closed-form Farquhar-von Caemmerer-Berry biophysical kinetics and in-situ soil telemetry, running offline over MCP v2025-11-25 within a 42.6 MB RAM envelope on ARM Cortex-A72 hardware.</em>
 </p>
 
 ### Registered Production Tools
