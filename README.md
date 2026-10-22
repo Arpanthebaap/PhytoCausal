@@ -131,6 +131,12 @@ In commercial agronomy, this creates an acute systemic failure mode termed **The
 
 When soil water dries past field capacity (matric potential $\Psi_m < -150\text{ kPa}$), roots signal the canopy via abscisic acid (ABA), closing stomata to prevent cavitation. Because nitrate ions ($NO_3^-$) reach roots via transpirational water flow, nutrient uptake stops even when subsoil nitrate is abundant ($>70\text{ mg/L}$). Denied nitrogen, leaves yellow. Naive computer vision models misdiagnose this as nitrogen deficiency and prescribe broadcast urea. In dry soil, fertilizer salts trigger osmotic shock, burning root tips and costing farmers $\$120\text{--}\$180\text{/ha}$ in destroyed crops and wasted inputs.
 
+<p align="center">
+  <img src="docs/assets/field_dilemma_correlation_failure.png" alt="Multi-Stress Field Dilemma and Naive Correlation AI Blindspot" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+  <br>
+  <em><b>Figure 2.</b> In-situ multi-stress dilemma selection and naive correlation AI failure mode in PhytoCausal. When presented with mid-summer vegetative maize under severe drought with high residual porewater nitrate ($[NO_3^-] = 72\text{ mg/L}$), ungrounded computer vision and multimodal models diagnose severe nitrogen deficiency ($\text{NDVI} = 0.41$) and recommend 110 kg/ha synthetic urea, risking catastrophic osmotic root tip burn and aquifer leaching.</em>
+</p>
+
 ### Research Questions
 
 - **RQ1 (Confounding Decoupling).** Can multi-depth soil matric potential ($\Psi_m$) and porewater conductivity ($EC_p$) be synchronized with canopy infrared radiometry ($\Delta T_c$) to mathematically decouple transpirational solute mass-flow arrest from true soil nitrogen exhaustion?
@@ -150,6 +156,12 @@ Automated crop diagnostic frameworks have evolved across three historically disc
 ---
 
 ## 3. Biophysical & Causal Mathematical Foundations
+
+<p align="center">
+  <img src="docs/assets/dual_stream_radiometry_soil.png" alt="Dual-Stream Edge Multimodal Sensing Telemetry" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+  <br>
+  <em><b>Figure 3.</b> Dual-stream edge multimodal telemetry ingestion in PhytoCausal. Stream 1 fuses close-up foliar optical phenotyping (calibrated SPAD 22.4, ExG, NDGRI) with FLIR canopy thermal radiometry ($\Delta T_c = +4.1^\circ\text{C}$, $g_{sw} = 0.042\text{ mol}$). Stream 2 synchronizes subsurface soil tensiometry ($\Psi_m = -285\text{ kPa}$), volumetric water content ($\text{VWC} = 13.8\%$), porewater EC ($2.1\text{ dS/m}$), and solute mass-flow flux ($J_N = 25.1\text{ mg N}$).</em>
+</p>
 
 ### 3.1 Farquhar-von Caemmerer-Berry (FvCB) Photosynthetic Kinetics
 Every candidate diagnosis and assimilation rate is strictly bounded by the closed-form Farquhar-von Caemmerer-Berry photosynthetic kinetic envelope (Farquhar et al., 1980):
@@ -215,6 +227,12 @@ $$\text{PNS} = P\left( \text{Chl}_{do(\Psi_m = -33\text{ kPa})} \ge 38, \;\text{
 
 When $\text{PNS} > 0.80$, the system proves that hydration alone will restore chlorophyll synthesis via mass-flow reactivation without requiring chemical nitrogen fertilizer.
 
+<p align="center">
+  <img src="docs/assets/causal_dag_counterfactual_do.png" alt="Structural Causal Directed Acyclic Graph and Counterfactual do Simulator" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+  <br>
+  <em><b>Figure 4.</b> Interactive Structural Causal Directed Acyclic Graph (DAG) and Counterfactual $do(X = x')$ Simulator in PhytoCausal. The green dashed pathway identifies the transpirational mass-flow bottleneck ($J_N = g_{sw} \cdot \text{VPD} \cdot [NO_3^-]_{\text{pore}}$). Intervening via rehydration $do(\Psi_m = -33\text{ kPa})$ predicts a $+14.4\text{ SPAD}$ chlorophyll recovery to $36.8\text{ SPAD}$ with an 83.2% Probability of Necessity and Sufficiency (PNS), verifying rehydration alone restores nitrogen assimilation without synthetic inputs.</em>
+</p>
+
 ---
 
 ## 4. Core Features & Capabilities
@@ -242,6 +260,12 @@ PhytoCausal was evaluated across a standardized benchmark cohort of **4,200 mult
 | **Multimodal LLM (Zero-Shot)** | 68.7% | 31.2% | 850.0 ms | 8.2 kg/ha |
 | **PhytoCausal (Ours)** | **3.2% (-78.2%)** | **0.00% (Zero Scorch)** | **4.8 ms** | **42.4 kg/ha** |
 
+<p align="center">
+  <img src="docs/assets/pearlian_decoupling_governor.png" alt="Pearlian Decoupling Output, Physical Safety Constraint, and Macro-Economic Ledger" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+  <br>
+  <em><b>Figure 5.</b> Pearlian multi-stress decoupling diagnostic output, biophysical safety governor, and macro-economic dividend ledger. The system diagnoses Abiotic Water Stress (Deceptive Chlorosis Decoupled), strictly forbids broadcast urea to prevent osmotic shock, projects a saving of $85\text{ kg N/ha}$ and $\$115\text{/ha}$, averts $52\text{ kg NO}_3^-$ aquifer leaching, and issues a cryptographic biokinetic governor proof receipt (<code>0xPHYTO-FAIL-0B96</code>).</em>
+</p>
+
 ### Key Experimental Findings
 1. **78.2% Reduction in Nitrogen Misdiagnoses:** PhytoCausal decreased false-positive nitrogen deficiency diagnoses from **81.4% to 3.2%** ($p < 0.001$), eliminating the common error where water stress is mistaken for nutrient starvation.
 2. **100% Elimination of Osmotic Root Scorch:** In 100% of water-stressed presentations, PhytoCausal triggered physical safety overrides, blocking hazardous fertilizer broadcast.
@@ -267,6 +291,12 @@ PhytoCausal establishes that **causal-biophysical grounding** is essential for t
 ## 8. Model Context Protocol (MCP v2025-11-25) Interface
 
 PhytoCausal implements the complete JSON-RPC 2.0 specification defined by Model Context Protocol (Spec v2025-11-25) over streamable Server-Sent Events (`GET /api/mcp/sse`) and HTTP POST (`POST /api/mcp`).
+
+<p align="center">
+  <img src="docs/assets/ai_biophysical_copilot.png" alt="AI Biophysical Diagnostic Copilot with FvCB Causal Grounding" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+  <br>
+  <em><b>Figure 6.</b> Autonomous AI Biophysical Diagnostic Copilot in PhytoCausal. The copilot couples multimodal reasoning (Gemini 3.0 Flash Multimodal) with closed-form Farquhar-von Caemmerer-Berry biophysical kinetics and in-situ soil telemetry, running offline over MCP v2025-11-25 within a 42.6 MB RAM envelope on ARM Cortex-A72 hardware.</em>
+</p>
 
 ### Registered Production Tools
 
