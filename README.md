@@ -7,13 +7,14 @@ Version 1.0.0 • MIT licence
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23499214.svg)](https://doi.org/10.5281/zenodo.23499214)
 [![GitLab CI](https://gitlab.com/arpan-ghosh-group/PhytoCausal/badges/main/pipeline.svg)](https://gitlab.com/arpan-ghosh-group/PhytoCausal/-/pipelines)
 [![GitHub Actions CI](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/ci.yml/badge.svg)](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/ci.yml)
+[![Google Cloud Run](https://img.shields.io/badge/Google_Cloud-Deployed_on_Cloud_Run-4285F4?logo=googlecloud&logoColor=white)](https://phytocausal-730322841754.us-central1.run.app)
 [![Pages](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/pages.yml/badge.svg)](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MCP Spec](https://img.shields.io/badge/Model_Context_Protocol-Spec_v2025--11--25-06B6D4.svg)](https://modelcontextprotocol.io)
 [![Physics Governor](https://img.shields.io/badge/Physics%20Governor-FvCB%20%2B%20Arrhenius-purple.svg)]()
 [![Deterministic Invariants](https://img.shields.io/badge/Biophysical_Invariants-100%25_Deterministic_Proofs-emerald)]()
 [![Edge Verification](https://img.shields.io/badge/Edge_Verification-ARM_Cortex--A72_Compliant-orange.svg)]()  
-**Repository:** https://github.com/Arpanthebaap/PhytoCausal • **Live Interactive Platform:** https://arpanthebaap.github.io/PhytoCausal/
+**Repository:** https://github.com/Arpanthebaap/PhytoCausal • **GitLab:** https://gitlab.com/arpan-ghosh-group/PhytoCausal • **Google Cloud Run:** https://phytocausal-730322841754.us-central1.run.app • **Live Web Platform:** https://arpanthebaap.github.io/PhytoCausal/
 
 ---
 

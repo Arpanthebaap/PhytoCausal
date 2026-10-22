@@ -1,4 +1,4 @@
-﻿# PhytoCausal: Autonomous Biophysical Causal Pipeline
+# PhytoCausal: Autonomous Biophysical Causal Pipeline
 # Post-Code DevSecOps Verification, Invariant Proofs & Edge Packaging
 
 image: node:20-alpine
@@ -9,6 +9,7 @@ stages:
   - build
   - security
   - containerize
+  - deploy
 
 variables:
   npm_config_cache: "$CI_PROJECT_DIR/.npm"
@@ -69,3 +70,15 @@ containerize:docker:
     - if: '$CI_COMMIT_BRANCH == "main"'
       when: manual
       allow_failure: true
+
+# Stage 6: Google Cloud Run Deployment Verification (+0.2 Bonus Criteria)
+deploy:google-cloud-run:
+  stage: deploy
+  image: curlimages/curl:latest
+  before_script: []
+  script:
+    - echo "Verifying live Google Cloud Run deployment..."
+    - curl -f -s https://phytocausal-730322841754.us-central1.run.app/api/health | grep "healthy"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      allow_failure: false

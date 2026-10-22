@@ -1,0 +1,7 @@
+﻿node_modules
+.git
+.github
+.gitlab
+dist
+.env
+.env.local
