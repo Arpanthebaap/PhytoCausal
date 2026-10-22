@@ -5,7 +5,8 @@
 **Contact:** `arpanghosh984@gmail.com` | +91 77971 30249 | [GitHub Profile](https://github.com/Arpanthebaap)  
 Version 1.0.0 • MIT licence  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23499214.svg)](https://doi.org/10.5281/zenodo.23499214)
-[![CI/CD](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/ci.yml/badge.svg)](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/ci.yml)
+[![GitLab CI](https://gitlab.com/arpan-ghosh-group/PhytoCausal/badges/main/pipeline.svg)](https://gitlab.com/arpan-ghosh-group/PhytoCausal/-/pipelines)
+[![GitHub Actions CI](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/ci.yml/badge.svg)](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/ci.yml)
 [![Pages](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/pages.yml/badge.svg)](https://github.com/Arpanthebaap/PhytoCausal/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MCP Spec](https://img.shields.io/badge/Model_Context_Protocol-Spec_v2025--11--25-06B6D4.svg)](https://modelcontextprotocol.io)
