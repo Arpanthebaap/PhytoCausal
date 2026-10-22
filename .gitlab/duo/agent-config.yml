@@ -1,0 +1,23 @@
+﻿# GitLab Duo Agent Platform Runner Configuration
+# PhytoCausal Biophysical Invariant & MCP Autonomous Agent Environment
+
+image: node:20-alpine
+
+setup_script:
+  - npm ci --prefer-offline || npm install --legacy-peer-deps
+
+network_policy:
+  allowed_domains:
+    - "registry.npmjs.org"
+  include_recommended_allowed: false
+  allow_all_unix_sockets: false
+
+cache:
+  paths:
+    - node_modules/
+    - .npm/
+  key:
+    files:
+      - package.json
+      - package-lock.json
+    prefix: "duo-phytocausal-cache"

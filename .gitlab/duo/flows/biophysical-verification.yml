@@ -1,0 +1,11 @@
+﻿# Custom Duo Flow: Post-Code Biophysical Invariant Certification
+name: "biophysical-invariant-certification"
+description: "Executes post-commit Pearlian causal SCM and Farquhar biophysical invariant assertions over Model Context Protocol"
+
+steps:
+  - name: "typecheck"
+    command: "npm run lint"
+  - name: "invariant-proofs"
+    command: "npm test"
+  - name: "edge-bundle-check"
+    command: "npm run build"
